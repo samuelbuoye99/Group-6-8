@@ -5,7 +5,7 @@ def is_palindrome(s):
         if char.isalnum():
             clean_text += char.lower()
 
-    reversed_text = clean_text[::-1]
+    reversed_text = "".join(reversed(clean_text))
 
     return clean_text == reversed_text
     
@@ -41,10 +41,10 @@ def is_palindrome2(s):
 
     return True
 
-print(is_palindrome2("madam"))
-print(is_palindrome2('teeth'))
-print(is_palindrome2("racecar"))
-print(is_palindrome2("A man, a plan, a canal: Panama"))
-print(is_palindrome2("hello"))
-print(is_palindrome2(""))
-print(is_palindrome2("a"))
+# print(is_palindrome2("madam"))
+# print(is_palindrome2('teeth'))
+# print(is_palindrome2("racecar"))
+# print(is_palindrome2("A man, a plan, a canal: Panama"))
+# print(is_palindrome2("hello"))
+# print(is_palindrome2(""))
+# print(is_palindrome2("a"))
