@@ -19,6 +19,8 @@ def is_palindrome(s):
 
 
 ## BONUS
+import time
+
 def is_palindrome2(s):
     left = 0
     right = len(s) - 1
@@ -40,6 +42,19 @@ def is_palindrome2(s):
         right -= 1
 
     return True
+
+# Measure execution time
+start_time = time.time()
+
+result = is_palindrome2("A man, a plan, a canal: Panama")
+
+end_time = time.time()
+
+# Calculate elapsed time
+elapsed_time = end_time - start_time
+
+print("Is palindrome:", result)
+print(f"Time elapsed: {elapsed_time:.8f} seconds")
 
 # print(is_palindrome2("madam"))
 # print(is_palindrome2('teeth'))

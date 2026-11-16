@@ -1,16 +1,20 @@
 def binary_strings(n):
-    a = 0
-    binary = []
+    results = []
+    current = []
 
-    while a <= n:
-        current = format(a, 'b')
-        binary.append(current)
+    def backtrack():
+        # Base case
+        if len(current) == n:
+            results.append("".join(current))
+            return
 
-        a += 1
+        # Try both possible characters
+        for bit in ["0", "1"]:
+            current.append(bit)  # Choose
 
-    return binary
+            backtrack()         # Explore
 
-print(binary_strings(0))
-print(binary_strings(1))
-print(binary_strings(2))
-print(len(binary_strings(4)))
+            current.pop()       # Unchoose
+
+    backtrack()
+    return results
