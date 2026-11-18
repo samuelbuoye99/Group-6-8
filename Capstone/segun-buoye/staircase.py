@@ -10,7 +10,7 @@ def staircase(n):
             if nums[i] + sum(path) > n:
                 continue
             path.append(nums[i])
-            explore(path, nums, start+i)
+            explore(path, nums, i)
             path.pop()
 
     explore([], [1, 2, 3], 0)
