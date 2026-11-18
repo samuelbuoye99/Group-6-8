@@ -13,17 +13,17 @@ def letter_case(s):
 
         else:
             if s[i].islower():
+                path.append(s[i])
+                explore(i+1, path)
+                path.pop()
                 path.append(s[i].upper())
                 explore(i+1, path)
                 path.pop()
-                path.append(s[i])
-                explore(i+1, path)
-                path.pop()
             else:
-                path.append(s[i].lower())
+                path.append(s[i])
                 explore(i+1, path)
                 path.pop()
-                path.append(s[i])
+                path.append(s[i].lower())
                 explore(i+1, path)
                 path.pop()
 
